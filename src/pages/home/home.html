@@ -6,9 +6,29 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  
+  <form [formGroup]="formGroup">
+
+    <ion-list inset>
+
+      <ion-item no-padding>
+        <ion-label stacked>Email:</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item no-padding>
+        <ion-label stacked>Password:</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <button ion-button block margin-top icon-left (click)="logForm()">
+        <ion-icon name="log-in"></ion-icon>
+        Log Form
+      </button>
+
+    </ion-list>
+
+  </form>
+
 </ion-content>
